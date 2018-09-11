@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-public class Panel_main extends JPanel {
+public class Panel_login extends JPanel {
 	private MainFrame mainFrame;
 
 	private JPanel login_panel;
@@ -18,7 +18,7 @@ public class Panel_main extends JPanel {
 
 	private Image background;
 
-	public Panel_main(MainFrame mainFrame) {
+	public Panel_login(MainFrame mainFrame) {
 		this.mainFrame = mainFrame;
 		init();
 

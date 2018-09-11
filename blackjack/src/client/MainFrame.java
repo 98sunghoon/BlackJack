@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class MainFrame extends JFrame {
 	// Screens
-	private Panel_main panel_main;
+	private Panel_login panel_main;
 	private Panel_rooms panel_rooms;
 	
 	public MainFrame() {
@@ -25,11 +25,11 @@ public class MainFrame extends JFrame {
 		setLocationRelativeTo(null);
 		
 		//panel 초기화
-		panel_main = new Panel_main(this);
+		panel_main = new Panel_login(this);
 		panel_rooms = new Panel_rooms(this);
 		
 		//초기 panel
-		add(panel_main);
+		add(panel_rooms);
 		
 	}
 
