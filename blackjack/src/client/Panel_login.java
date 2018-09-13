@@ -2,11 +2,15 @@ package client;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
+import java.net.*;
 
 import javax.swing.*;
 
 public class Panel_login extends JPanel {
 	private MainFrame mainFrame;
+
+	public static final String serverIP = "192.168.181.1";
 
 	private JPanel login_panel;
 	private JLabel id_label;
@@ -106,11 +110,37 @@ public class Panel_login extends JPanel {
 	}
 
 	public void login() {
-		mainFrame.changePanel("panel_rooms");
+		String id = id_field.getText();
+		String pw = password_field.getText();
+		DataOutputStream out;
+		DataInputStream in;
+
+		StringBuffer loginBuffer = new StringBuffer();
+		int login_result = -1;
+		loginBuffer.append("LoginRequest." + id + "." + pw);
+		try {
+			Socket socket = new Socket(serverIP, 7000);
+			out = new DataOutputStream(socket.getOutputStream());
+			in = new DataInputStream(socket.getInputStream());
+			out.writeUTF(loginBuffer.toString());
+			do {
+				login_result = in.readInt();
+				System.out.println("doing");
+			} while (login_result == -1);
+		} catch (UnknownHostException e) {
+		} catch (IOException e) {
+		}
+
+		if (login_result == 200) {
+			System.out.println("success");
+		} else {
+			System.out.println("failed");
+		}
+		// mainFrame.changePanel("panel_rooms");
 	}
 
 	public void signup() {
-		//클래스 만들어서 생성//경고창 어떻게?
+		// 클래스 만들어서 생성//경고창 어떻게?
 	}
 
 }

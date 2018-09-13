@@ -1,4 +1,4 @@
-package client.chat;
+package cleint.chat2;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -10,9 +10,12 @@ import java.util.*;
 
 import javax.swing.*;
 
-public class ChatClient {
-	public static String UserID = "[guest" + (new Date().getTime()) % 11 + "]";
+import client.chat.*;
 
+public class ChatClient2 {
+	public static String UserID = "[guest" + (new Date().getTime()) % 11 + "]";
+//	ClientSender sender;
+	
 	private TextArea chat_log_panel;
 	private TextField send_field;
 	private JButton send_btn;
@@ -20,7 +23,7 @@ public class ChatClient {
 
 	String sendString;
 
-	public ChatClient(TextArea chat_log_panel, TextField send_field, JButton send_btn) {
+	public ChatClient2(TextArea chat_log_panel, TextField send_field, JButton send_btn) {
 		setLogPanel(chat_log_panel);
 		setSendArea(send_field);
 		setSendBtn(send_btn);
@@ -42,7 +45,7 @@ public class ChatClient {
 	}
 
 	public void sendMessage(String s) {
-		sendWriter.println("IDhighkrs12345" + ChatClient.UserID + ">");
+		sendWriter.println("IDhighkrs12345" + ChatClient2.UserID + ">");
 		sendWriter.flush();
 		sendString = s;
 		sendWriter.println(sendString);

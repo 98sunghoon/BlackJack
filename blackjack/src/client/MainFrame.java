@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class MainFrame extends JFrame {
 	// Screens
-	private Panel_login panel_main;
+	private Panel_login panel_login;
 	private Panel_rooms panel_rooms;
 	
 	public MainFrame() {
@@ -25,11 +25,11 @@ public class MainFrame extends JFrame {
 		setLocationRelativeTo(null);
 		
 		//panel 초기화
-		panel_main = new Panel_login(this);
+		panel_login = new Panel_login(this);
 		panel_rooms = new Panel_rooms(this);
 		
 		//초기 panel
-		add(panel_rooms);
+		add(panel_login);
 		
 	}
 
@@ -41,10 +41,13 @@ public class MainFrame extends JFrame {
 		getContentPane().removeAll();
 
 		if (panelName.equals("panel_main")) {
-			getContentPane().add(panel_main);
+			setSize(1000,800);
+			getContentPane().add(panel_login);
 		} else if (panelName.equals("panel_rooms")) {
+			setSize(1300,800);
 			getContentPane().add(panel_rooms);
 		} else if(panelName.equals("panel_game")) {
+			setSize(1300,800);
 			
 		}
 

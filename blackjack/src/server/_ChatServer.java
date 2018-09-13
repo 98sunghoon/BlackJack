@@ -1,10 +1,10 @@
-package server.chatServer;
+package server;
 
 import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class ChatServer {
+public class _ChatServer {
 
 	public static ArrayList<PrintWriter> OutputList;
 
@@ -16,13 +16,13 @@ public class ChatServer {
 
 			while (true) {
 				Socket c_socket = s_socket.accept();
-				ClientManagerThread c_thread = new ClientManagerThread();
+				_ClientManagerThread c_thread = new _ClientManagerThread();
 				c_thread.setSocket(c_socket);
 
 				OutputList.add(new PrintWriter(c_socket.getOutputStream()));
 				c_thread.start();
-
 			}
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
