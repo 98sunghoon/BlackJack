@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="background" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sh.blackjack.client.view.LogInController">
+	<children>
+		<ImageView fx:id="imgView" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+		<Pane layoutX="250.0" layoutY="315.0" prefHeight="230.0" prefWidth="300.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="315.0">
+			<children>
+
+				<TextField fx:id="id_field" layoutX="77.0" layoutY="38.0" prefHeight="33.0" prefWidth="207.0">
+					<cursor>
+						<Cursor fx:constant="WAIT" />
+					</cursor>
+				</TextField>
+				<PasswordField fx:id="pw_field" layoutX="77.0" layoutY="91.0" prefHeight="33.0" prefWidth="207.0">
+					<cursor>
+						<Cursor fx:constant="MOVE" />
+					</cursor>
+				</PasswordField>
+				<Label fx:id="id_label" layoutX="16.0" layoutY="39.0" prefHeight="33.0" prefWidth="30.0" text="ID" />
+				<Label fx:id="pw_label" layoutX="13.0" layoutY="90.0" prefHeight="33.0" prefWidth="37.0" text="PW" />
+				<Button fx:id="login_btn" layoutX="14.0" layoutY="134.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="33.0" prefWidth="272.0" text="Log In" />
+				<Button fx:id="signup_btn" layoutX="14.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleSignup" prefHeight="33.0" prefWidth="272.0" text="Sign Up" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

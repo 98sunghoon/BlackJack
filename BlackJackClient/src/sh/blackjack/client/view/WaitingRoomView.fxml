@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sh.blackjack.client.view.WaitingRoomController">
+   <children>
+      <SplitPane dividerPositions="0.7154308617234469" layoutX="282.0" layoutY="85.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0">
+               <children>
+                  <Pane layoutX="85.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TableView layoutX="40.0" layoutY="136.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" resizable="false" text="#" />
+                      <TableColumn prefWidth="347.0" resizable="false" text="방제목" />
+                        <TableColumn prefWidth="138.0" resizable="false" text="방장" />
+                        <TableColumn prefWidth="73.0" resizable="false" text="인원" />
+                        <TableColumn prefWidth="66.0" resizable="false" text="잠금" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="300.0">
+               <children>
+                  <Pane layoutX="28.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="username_label" layoutX="11.0" layoutY="14.0" prefHeight="37.0" prefWidth="272.0" text="userID(name) 님" textAlignment="RIGHT">
+                           <font>
+                              <Font name="HCR Dotum Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="balance_label" layoutX="11.0" layoutY="65.0" prefHeight="21.0" prefWidth="272.0" text="100,000원" textAlignment="RIGHT">
+                           <font>
+                              <Font name="MS Reference Sans Serif" size="24.0" />
+                           </font></Label>
+                        <ImageView id="money" fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></Pane>
+                  <TextArea fx:id="chat_log" layoutX="50.0" layoutY="126.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+                  <TextField fx:id="send_field" alignment="TOP_LEFT" layoutX="-15.0" layoutY="493.0" prefHeight="130.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+                  <Button fx:id="send_btn" layoutX="204.0" layoutY="496.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="80.0" text="send" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
